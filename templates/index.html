@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>ML API</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="form-panel">
+        
+
+        <h1>Input smiles</h1>
+        <form action="{{ url_for('predict')}}" method="post">
+          <div class="form-control">
+            <input type="text" name="Sepal_Length" required>
+            <label>Smiles</label>
+          </div>
+          <button class="btn">Find</button>
+        </form>
+      </div>
+      <div class="picture-panel"></div>
+    </div>
+
+
+    <script>
+      const labels = document.querySelectorAll(".form-control label");
+
+      labels.forEach(label => {
+        const letters = label.textContent.split("");
+        label.innerHTML = "";
+        letters.forEach((letter, idx) => {
+          const span = document.createElement("span");
+          span.textContent = letter;
+          span.style.transitionDelay = `${idx * 50}ms`;
+          label.appendChild(span);
+        });
+      });
+    </script>
+  </body>
+</html>

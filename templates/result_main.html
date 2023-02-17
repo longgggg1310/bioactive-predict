@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/result.css') }}">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+    <div class="header">
+        <a href="/" class="logo">Prediction Page</a>
+        <div class="header-right">
+          <a class="active" href="/">Home</a>
+          <a href="#contact">Contact</a>
+          <a href="#about">About</a>
+        </div>
+    </div>
+
+    <form>
+        <p>OriginalSMILES: {{ name }}</p>
+        <p>Full Name: {{full_name}}</p>
+        <p>Simple Name: {{ name_text }} </p>
+        <p>
+        <table border="0">
+            <tbody>
+                <tr>
+                    <td valign="top">
+                        <img id="borderimg1" loading="lazy" src="{{ url_for('static', filename='smiles.png') }}" alt="Alps" decoding="async"  background-repeat:no-repeat; background-position:center; >
+                    </td>
+    
+                    <td width="30"></td>
+                    <td valign ='top'>
+                            Smiles Formula: <a id="div1" name = 'div1' >{{ name }}</a>
+                            <br>
+                            <a href="javascript:CopyToClipboard('div1')">Get data as text</a> (for copy / paste).
+                            <br>
+                            Predict: <a class="example">{{ name }} is {{prediction_text}} with DPP4</a>
+                            <br>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <small>
+            Find from chemical database <a href="https://pubchem.ncbi.nlm.nih.gov/#query={{ molecular }}">{{ molecular }}</a>
+            <br>
+            Get more information about <a href="https://wikipedia.org/wiki/{{name_text}}">{{ name_text }}</a>
+        </small>
+        </p>
+    
+    </form>
+    
+</body>
+<script>
+    function CopyToClipboard(id){
+        var r = document.createRange();
+        r.selectNode(document.getElementById(id));
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(r);
+        try {
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('Successfully copy smile formula: ' + r);
+        } catch (err) {
+            alert('Unable to copy!');
+        }   
+    }
+    const result = document.querySelector(".example")
+    if(result.textContent.includes('ACTIVE')) {
+        document.querySelector('body').style.backgroundColor = '#60b347';
+    }
+    if(result.textContent.includes('INACTIVE')) {
+        document.querySelector('body').style.backgroundColor = '#ff0000';
+    }
+   
+
+</script>
+</html>

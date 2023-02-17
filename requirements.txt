@@ -1,0 +1,83 @@
+absl-py==1.4.0
+astunparse==1.6.3
+attrs==21.4.0
+backcall==0.2.0
+Bottleneck @ file:///opt/conda/conda-bld/bottleneck_1657175564434/work
+cachetools==5.3.0
+certifi @ file:///croot/certifi_1671487769961/work/certifi
+charset-normalizer==3.0.1
+chembl-webresource-client==0.10.8
+click==8.1.3
+decorator==5.1.1
+easydict==1.10
+Flask==2.2.2
+flatbuffers==23.1.21
+gast==0.4.0
+google-auth==2.16.0
+google-auth-oauthlib==0.4.6
+google-pasta==0.2.0
+grpcio==1.51.1
+h5py==3.8.0
+idna==3.4
+imageio==2.25.0
+importlib-metadata==6.0.0
+ipython==7.34.0
+itsdangerous==2.1.2
+jedi==0.18.2
+Jinja2==3.1.2
+joblib==1.2.0
+keras==2.11.0
+libclang==15.0.6.1
+Markdown==3.4.1
+MarkupSafe==2.1.2
+matplotlib-inline==0.1.6
+mkl-fft==1.3.1
+mkl-random @ file:///tmp/build/80754af9/mkl_random_1626179032232/work
+mkl-service==2.4.0
+numexpr @ file:///croot/numexpr_1668713893690/work
+numpy @ file:///opt/conda/conda-bld/numpy_and_numpy_base_1653915516269/work
+oauthlib==3.2.2
+opencv-python==4.7.0.68
+opt-einsum==3.3.0
+packaging @ file:///croot/packaging_1671697413597/work
+pandas==1.3.5
+parso==0.8.3
+pexpect==4.8.0
+pickleshare==0.7.5
+Pillow==9.3.0
+prompt-toolkit==3.0.36
+protobuf==3.19.6
+ptyprocess==0.7.0
+PubChemPy==1.0.4
+pyasn1==0.4.8
+pyasn1-modules==0.2.8
+Pygments==2.14.0
+python-dateutil @ file:///tmp/build/80754af9/python-dateutil_1626374649649/work
+pytz @ file:///croot/pytz_1671697431263/work
+PyYAML==6.0
+rdkit==2022.9.4
+requests==2.28.2
+requests-cache==0.7.5
+requests-oauthlib==1.3.1
+rsa==4.9
+scikit-learn==1.0.2
+scipy==1.7.3
+six @ file:///tmp/build/80754af9/six_1644875935023/work
+tensorboard==2.11.2
+tensorboard-data-server==0.6.1
+tensorboard-plugin-wit==1.8.1
+tensorflow==2.11.0
+tensorflow-estimator==2.11.0
+tensorflow-io-gcs-filesystem==0.30.0
+termcolor==2.2.0
+threadpoolctl==3.1.0
+traitlets==5.9.0
+typing_extensions==4.4.0
+url-normalize==1.4.3
+urllib3==1.26.14
+wcwidth==0.2.6
+Werkzeug==2.2.2
+Wikipedia-API==0.5.8
+wrapt==1.14.1
+xgboost==1.6.2
+zipp==3.12.0
